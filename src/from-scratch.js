@@ -1,7 +1,7 @@
 const measureRain = (inches) => {
 
   if (inches === 0){
-  return `crought`
+  return `drought`
  } else if (inches < 2){
   return `dry`
  }else if (inches < 4){
@@ -13,14 +13,14 @@ const measureRain = (inches) => {
  } 
 };
 
-// might need a variable to store all pets not sure yet
+
 const happyBirthdayPet = (breed, age) => {
   
   if (breed === 'snake'){
     return 'Hiss hiss!'
   } else if (breed === 'cat' && age < 5){
     return 'Mew mew!'
-  } else if ( breed === 'cat' && age <= 5 ){
+  } else if ( breed === 'cat' && age >= 5 ){
     return  'Meow meow!'
   } else if (breed === 'dog' && age < 5){
     return 'Arf arf!'
@@ -32,25 +32,12 @@ const happyBirthdayPet = (breed, age) => {
     return  'Happy birthday!'
   }
 };
-console.log(happyBirthdayPet('dog', 4))
+       happyBirthdayPet('dog', 4)
 
-/* 
-Write a function happyBirthdayPet that takes two arguments, a string breed and a number age. It should return a message in the following situations:
 
-'snake', any age - 'Hiss hiss!'
-'cat', less than 5 - 'Mew mew!'
-'cat', 5 or more - 'Meow meow!'
-'dog', less than 5 - 'Arf arf!'
-'dog', 5 to less than 10 - 'Woof woof!'
-'dog', 10 or more - 'Boof!'
-If none of these conditions are met, just return a message of 'Happy birthday!'
-
-*/
 const funTypes = (jsType) => {
   if (typeof jsType === "string") {
     return "That's just some text.";
-  } else if (typeof jsType === "number") {
-    return "That's a good number.";
   } else if (typeof jsType === "boolean") {
     return "To bool, or not to bool?";
   } else if (typeof jsType === "undefined") {
@@ -63,10 +50,12 @@ const funTypes = (jsType) => {
     return "I order you to be indexed.";
   } else if (Number.isNaN(jsType)) {
     return "Well, now you're just showing off.";
+  } else if (typeof jsType === "number") {
+    return "That's a good number.";
   }
 };
 
-console.log(funTypes(false)); 
+
 
 
 
@@ -81,7 +70,7 @@ const rounder = (float, roundingSetting) => {
   }
 
 };
-console.log(rounder(5.6, 'honest'))
+
 
 
 
